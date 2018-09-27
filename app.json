@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/index/index",
+    "pages/home/index",
+    "components/imageView/imageView"
+  ],
+  "window": {
+    "backgroundTextStyle": "#000000",
+    "navigationBarBackgroundColor": "#f7f7f7",
+    "navigationBarTitleText": "病理图像标注审核系统",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#f7f7f7"
+  }
+}

@@ -1,0 +1,113 @@
+<!--pages/home/index.wxml-->
+<view class='home'>
+  <view class="wrapper">
+  <!-- 排名 -->
+    <view class='header'>
+          <view class='number'>
+              <text class='number_text'>当前总任务进度: </text>
+              <text class='number_text'>{{numbers}}/{{counts}}</text>
+          </view>
+          <view class='sort'>
+            <view class='sort_box'>
+              <text class='sort_text'>原图分类：</text>
+              <text class='sort_text'>{{sourceImg}}</text>
+            </view>
+
+            <view class='sort_box'>
+              <text class='sort_text'>TIF-ID：</text>
+              <text class='sort_text'>{{tifId}}</text>
+            </view>
+
+            <view class='sort_box'>
+              <text class='sort_text'>标注ID：</text>
+              <text class='sort_text'>{{labelId}}</text>
+            </view>
+          </view>
+    </view>
+    <!-- 图片 -->
+    <view class='image_box'>
+
+       <view class='iamge_wrapper' 
+            wx:if="{{url}}" 
+            bindtouchstart="touchStart" 
+            bindtouchend="touchEnd">
+            <image src="{{url}}" 
+              catchtap="clickImage" 
+              mode="scaleToFill"
+              data-list="{{urls}}" 
+              data-src="{{url}}"
+              style="width:{{ scaleWidth }}%; height:{{ scaleHeight }}%"
+              class="{{swing ? 'swing-right-fwd':''}} image_view"
+              animation="{{animationData}}"></image>
+
+          <view class='tip'>
+            <view class='tip_box'>
+                <image class='tip_1' src='{{tip_1}}' wx:if="{{checkMsg}}"></image>
+              <text class="{{checkMsg.id == tip.id && checkMsg !== null ? 'green':'red'}}" 
+              wx:if="{{checkMsg}}">{{tip.name_en}}</text>
+              <text wx:else>{{tip.name_en}}</text>
+            </view>
+          </view>
+
+
+            <view class='tip2' wx:if="{{checkMsg}}">
+              <view class='tip_box2'>
+              <image class='tip_2' src='{{tip_2}}'></image>
+                  <text class="{{checkMsg.id == tip.id && checkMsg !== null ? 'green':''}}">{{checkMsg.name_en}}</text>
+            </view>
+            </view>
+      </view>
+      
+      <view class='iamge_wrapper' wx:else>
+          <image src="{{no_data}}" mode="scaleToFill" class='no_data'></image>
+          <text class='no_data_text'>{{tip_msg}}</text>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="actions" wx:if="{{url}}">
+        <view>   </view>
+        <view class='btn_box'>
+          <button bindtap="btnAction" wx:for="{{btn}}" 
+          wx:key='index'  data-restid="{{item.ret}}" 
+          class="btn" hover-class="active">{{item.tip}}</button>
+        </view>
+    </view>
+  </view>
+
+  <!-- 选择标签 -->
+  <view class="{{show_wrapper ? '':'show'}} select">
+      <view class='select_box'>
+            <view class='title'>
+                  <text class='title_text'>请选择您认为正确的答案</text>
+            </view>
+
+    <!-- 列表 -->
+            <view class='select_list'>
+                     <view class='item'
+                        wx:for="{{items}}" wx:key='index'>
+                        <view
+                            data-id="{{item.id}}"
+                            class="{{item.id == catalogSelect ? 'select_it':'item_list'}} catalog_item"
+                            bindtap="chooseCatalog">
+                            <text class='item_text'>{{item.name_en}}</text>
+                        </view>
+                        </view>
+
+                        <!-- <view class='others' data-text="其他答案" bindtap="chooseOther">
+                                <view class='other_item'
+                                class="{{otherSelect ? 'select_other':''}} other_item"
+                                >
+                                  <text class='item_text'>其他答案</text>
+                                </view>          
+                        </view> -->
+            </view>
+
+    <!-- 提交 -->
+            <view class='select_actions'>
+                 <button bindtap="next_image" class="actions_btn" hover-class="active">提交并进入下一张</button>
+                  <button bindtap="cancel_image" class="cancle_btn" hover-class="active">取消</button>
+            </view>
+      </view>
+  </view>
+</view>

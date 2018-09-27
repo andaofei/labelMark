@@ -1,0 +1,6 @@
+<!--components/imageView/imageView.wxml-->
+<template name="imageTemplate">
+  <view class="imagecontainer">
+    圖片瀏覽
+  </view>
+</template>

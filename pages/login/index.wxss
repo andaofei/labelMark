@@ -1,0 +1,79 @@
+/* pages/main/index.wxss */
+.images{
+  text-align-last: center;
+}
+.ai{
+  width: 120px;
+  height: 160px;
+}
+.avator{
+  width: 44rpx;
+  height: 1.4rem;
+  vertical-align: baseline;
+}
+.image-box{
+  width: 100%;
+  padding: 60rpx 0;
+  text-align: center;
+}
+.wrapper{
+  padding: 40rpx 0;
+}
+.avator_box{
+  flex: 0 0 46rxp;
+}
+.user,.pass{
+  display: flex;
+  padding: 24rpx 40rpx;
+  background: #fff;
+  margin-bottom: 10rpx;
+  border-radius:8rpx;
+}
+ /* ::-webkit-input-placeholder {
+      color: #000; 
+    font-size: 28rpx;
+    font-family:UICTFontTextStyleBody;
+
+}
+:-moz-placeholder{
+      color: #000; 
+    font-size: 28rpx;
+    font-family:UICTFontTextStyleBody;
+
+}
+:-ms-input-placeholder{
+    color: #000; 
+    font-size: 28rpx;
+    font-family:UICTFontTextStyleBody;
+
+}  */
+.input_c{
+    padding-left: 20rpx;
+     font-size: 28rpx;  
+    flex: 1 1 auto;
+}
+.login{
+  width: 80%;
+  margin: 0 auto;
+}
+.btn{
+  margin-top: 60rpx;
+}
+.submit{
+  color: #fff;
+  font-size: 28rpx;
+  line-height:90rpx;
+  background: #2A2D32;
+  box-shadow: 0 8px 10px 0 rgba(66,68,71,0.20);
+  border-radius: 8rpx;
+}
+.active{
+    background: #000;
+  }
+ .phcolor{
+    color: #000; 
+    font-size: 28rpx;
+     line-height: 28rpx;
+    font-weight: 600;  
+    font-family:UICTFontTextStyleBody;
+} 

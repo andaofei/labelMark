@@ -1,0 +1,239 @@
+/* pages/home/index.wxss */
+.home{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background: #f7f7f7;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+.header{
+  margin-bottom: 15px;
+  padding: 0 20rpx;
+}
+.number{
+  padding: 0 20rpx;
+  border-radius: 20px;
+}
+.number_text{
+  font-size: 24rpx;
+  color:#000;
+  font-weight: 600;
+  line-height:48rpx; 
+}
+.sort{
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.sort_box{
+  /* flex: 1; */
+  display: flex;
+  /* background: #000; */
+  background: linear-gradient(180deg, #525B63 0%, #40474E 100%);
+  border-radius:12px;
+  padding: 0 10rpx;
+}
+.sort_box:nth-child(2){
+  margin: 0 5rpx;
+}
+.sort_text{
+  font-size: 24rpx;
+  color: #fff;
+  line-height:42rpx;
+}
+.image_box{
+    width: 100%;
+    height: 60%;
+}
+.iamge_wrapper{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+.image_view_box{
+    width: 100%;
+    height: 90%;
+    border-radius: 10rpx;
+    position: absolute;
+    top:5%;
+    left: 0;
+    box-shadow: 0 8px 10px 0 rgba(66,68,71,0.20);
+    z-index: 5;
+}
+  .image_view{
+    position: absolute;
+    top:0;
+    left: 2.5%;
+    z-index: 10;
+    width: 95%;
+    height: 100%;
+    border-radius: 10rpx;
+    box-shadow: 0 8px 10px 0 rgba(66,68,71,0.20);
+  }
+  .view_image{
+    width: 100%;
+    height: 100%;
+  }
+  .no_data{
+    width: 100%;
+    height: 100%;
+  }
+  .no_data_text{
+    text-align: center;
+    font-size: 26rpx;
+    padding: 20rpx;
+    line-height: 48rpx;
+    display: block;
+    color:#2A2D32;
+  }
+  .tip_box{
+  }
+  .tip_1,.tip_2{
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  .tip{
+    left: 2.5%;
+  }
+  .tip,.tip2{
+    position: absolute;
+    bottom:0;
+    background: rgba(41,44,49,0.60);
+    color: #fff;
+    padding: 16rpx 40rpx;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+    z-index: 99;
+  }
+  .tip2{
+    right: 2.5%;
+  }
+  .actions,.select_actions{
+    /* padding: 100rpx 40rpx 0 40rpx; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .actions{
+    height: 20%;
+  }
+  .select_actions{
+    height: 25%;
+  }
+  .btn_box{
+    display: flex;
+  }
+  .btn{
+    padding: 10rpx 50rpx;
+    color: #fff;
+    font-size: 24rpx;
+    line-height:70rpx;
+    background: #2A2D32;
+    box-shadow: 0 8px 10px 0 rgba(66,68,71,0.20);
+    border-radius: 4px;
+  }
+  .select{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top:0;
+  }
+  .select_box{
+    margin: 0 auto;
+    width: 95%;
+    background: #fff;
+    height: 85%;
+    margin-top: 105rpx;
+    box-shadow: 0 8px 10px 0 rgba(66,68,71,0.20);
+    border-radius: 4px;
+  }
+  .title{
+    text-align: center;
+    padding: 24rpx 0;
+  }
+  .title_text{
+     color: #2A2D32;
+      font-size: 32rpx;
+      line-height: 38rpx;
+  }
+  .select_list{
+    display: flex;
+    padding: 30rpx 20rpx;
+    flex-wrap: wrap;
+
+  }
+  .item{
+    flex: 0 0 18%;
+    margin-left: 10rpx;
+  }
+  .item_list{
+    color: #2A2D32;
+    background: #f4f4f4;
+  }
+  .catalog_item{
+    border-radius: 30rpx;
+    margin-bottom: 20rpx;
+    padding: 0 12rpx;
+    text-align: center;
+  }
+  .item_text{
+    font-size: 24rpx;
+    line-height: 60rpx;
+  }
+  .others{
+    margin-left: 8rpx;
+     margin-bottom: 24rpx;
+  }
+  .other_item{
+     border: 1px solid #DDDDDD;
+    background: #fff;
+    color: #2A2D32;
+   border-radius: 32rpx;
+    padding: 0 32rpx;
+}
+  .actions_btn,.cancle_btn{
+    padding: 10rpx 40rpx;
+    width: 60%;
+    color: #fff;
+    font-size: 24rpx;
+    background: #2A2D32;
+    box-shadow: 0 16rpx 20rpx 0 rgba(66,68,71,0.20);
+    border-radius: 8rpx;
+  }
+  .actions_btn{
+    line-height:70rpx;
+  }
+  .cancle_btn{
+    line-height:70rpx;
+    margin-top: 16rpx;
+  }
+  .show{
+    display: none;
+  }
+  .active{
+      background: #000;
+    }
+    .select_it{
+      background: #0052CC!important;
+      color: #fff!important;
+    }
+    .select_other{
+      background: #0052CC!important;
+      color: #fff!important;
+    }
+.green{
+  color: rgba(71, 203, 137,1)!important;
+}
+.red{
+  color: #FF001F!important;
+}

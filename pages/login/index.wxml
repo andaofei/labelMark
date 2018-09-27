@@ -1,0 +1,40 @@
+<!--pages/main/index.wxml-->
+<view class="container">
+    <view class="images">
+      <view class='image-box'>
+        <image src="{{aiUrl}}" class='ai' mode="scaleToFill"></image>
+        </view>
+    </view>
+
+    <view class='wrapper'>
+      <view class='login'>
+          <view class='user'>
+            <view class='avator_box'>
+            
+              <image src="{{user}}" class='avator'></image>
+          
+            </view>
+            
+            <input placeholder="账号" maxlength="18"
+            bindinput="userName"
+             value='{{username}}' name="username" type='text' placeholder-class="phcolor" class='input_c' auto-focus/>
+          </view>
+
+           <view class='pass'> 
+           <view class='avator_box'>
+         
+              <image src="{{pas}}" class='avator'></image>
+       
+           </view>
+           
+            <input placeholder="密码" maxlength="18" value='{{password}}' 
+            bindinput="userPass"
+            name="password" placeholderClass="phcolor"  class='input_c' password/>
+          </view>
+
+          <view class='btn'>
+             <button bindtap="login" class='submit' hover-class="active">登陆</button>
+          </view>
+      </view>
+    </view>
+</view>
